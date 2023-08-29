@@ -2,7 +2,11 @@
   <div>
     <Header />
     <Slider />
-    <RestaurantCard />
+    <section class="restaurant-list">
+      <h3 class="title">Restaurantes</h3>
+      <RestaurantCard />
+    </section>
+
     <Footer />
   </div>
 </template>
@@ -24,4 +28,17 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.restaurant-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ededed;
+}
+</style>
