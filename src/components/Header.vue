@@ -1,8 +1,10 @@
 <template>
   <header class="header">
-    <a href="#" class="brand"
-      ><img src="@/assets/images/LaBotanicaLogo.png" alt="Logo"
-    /></a>
+    <img
+      class="header-logo"
+      src="@/assets/images/LaBotanicaLogo.png"
+      alt="Logo"
+    />
   </header>
 </template>
 
@@ -23,5 +25,9 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
+}
+.header-logo {
+  width: 100%;
+  max-width: 250px;
 }
 </style>

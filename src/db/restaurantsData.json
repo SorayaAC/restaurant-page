@@ -1,24 +1,28 @@
 
 [
     {
+        "id": "1",
         "name": "La botanica Madrid",
         "logo": "../images/RestaurantsLogos/LogoMadrid.png",
         "image": "../images/Restaurants/Madrid.jpeg",
         "location": "Madrid"
     },
     {
+        "id": "2",
         "name": "La botanica Barcelona",
         "logo": "../images/RestaurantsLogos/LogoMadrid.png",
         "image": "../images/Restaurants/Barcelona.jpeg",
         "location": "Barcelona"
     },
     {
+        "id": "3",
         "name": "La botanica Bilbao",
         "logo": "../images/RestaurantsLogos/LogoMadrid.png",
         "image": "https://picsum.photos/200/300",
         "location": "Bilbao"
     },
     {
+        "id": "4",
         "name": "La botanica Valencia",
         "logo": "../images/RestaurantsLogos/LogoMadrid.png",
         "image": "https://picsum.photos/200/300",
