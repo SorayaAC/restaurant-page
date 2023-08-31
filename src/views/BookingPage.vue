@@ -2,7 +2,9 @@
   <div>
     <Header />
     <Slider />
-    <Form />
+    <div class="home-wrapper">
+      <Form :restaurantLogo="getSelectedRestaurant.nameLogo" />
+    </div>
     <Footer />
   </div>
 </template>
@@ -12,15 +14,15 @@ import Header from '@/components/Header.vue';
 import Slider from '@/components/Slider.vue';
 import Form from '@/components/Form.vue';
 import Footer from '@/components/Footer.vue';
+
+import restaurantsData from '@/db/restaurantsData.json';
 export default {
   name: 'BookingPage',
-  props: {
-    restaurants: {
-      type: Array,
-      required: true,
-    },
+  data() {
+    return {
+      restaurants: restaurantsData,
+    };
   },
-
   components: {
     Header,
     Slider,
@@ -29,11 +31,9 @@ export default {
   },
   computed: {
     getSelectedRestaurantId() {
-      // get for the route
       return this.$route.params.id;
     },
-    getSelectedReaturantData() {
-      // get for the route
+    getSelectedRestaurant() {
       return this.restaurants.find(
         (restaurant) => restaurant.id === this.getSelectedRestaurantId
       );
@@ -42,4 +42,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.home-wrapper {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+</style>

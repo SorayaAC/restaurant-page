@@ -16,12 +16,12 @@
         <i
           class="fa-solid fa-circle-chevron-left slider-icon"
           @click="prevSlide"
-          style="color: #d8a557"
+          style="color: #ae8a46"
         ></i>
         <i
           class="fa-solid fa-circle-chevron-right slider-icon"
           @click="nextSlide"
-          style="color: #d8a557"
+          style="color: #ae8a46"
         ></i>
       </div>
     </div>
@@ -105,7 +105,7 @@ export default {
 }
 .slider-icon {
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.5rem;
   outline: none;
 }
 

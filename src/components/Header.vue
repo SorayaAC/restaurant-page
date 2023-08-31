@@ -6,16 +6,32 @@
       :to="{ name: 'RestaurantList', hash: 'first-title' }"
       >Reservar</router-link
     > -->
-    <button class="header-button" @click="bookRestaurant">Reservar</button>
+    <button v-if="isHomePage" class="header-button" @click="bookRestaurant">
+      Reservar
+    </button>
+    <button v-else class="header-button" @click="returnHome">Volver</button>
   </header>
 </template>
 
 <script>
 export default {
   name: 'HeaderComponent',
+  computed: {
+    isHomePage() {
+      if (this.$route.path === '/') {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
+
   methods: {
     bookRestaurant() {
       this.$router.push({ name: 'RestaurantCard' });
+    },
+    returnHome() {
+      this.$router.push({ path: '/' });
     },
   },
 };
@@ -39,7 +55,7 @@ export default {
   height: auto;
 }
 .header-button {
-  background-color: #d8a557;
+  background-color: #ae8a46;
   border: none;
   padding: 0.5rem;
   color: black;

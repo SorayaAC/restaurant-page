@@ -1,6 +1,11 @@
 <template>
   <section>
-    <h1>About Us</h1>
+    <div class="title">
+      <div class="separator"></div>
+      <h3 class="title-text">Quienes Somos</h3>
+      <div class="separator"></div>
+    </div>
+
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro tempora
       magni officia velit aliquam eligendi odio aliquid ullam culpa excepturi
@@ -27,4 +32,24 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.separator {
+  flex: 1;
+  height: 1px;
+  background-color: #ae8a46;
+}
+.title-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ae8a46;
+
+  margin: 0 1rem;
+  text-transform: uppercase;
+}
+</style>

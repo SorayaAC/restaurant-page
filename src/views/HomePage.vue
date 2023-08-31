@@ -2,8 +2,10 @@
   <div>
     <Header />
     <Slider />
-    <AboutUs />
-    <RestaurantList />
+    <div class="home-wrapper">
+      <AboutUs />
+      <RestaurantList />
+    </div>
     <Footer />
   </div>
 </template>
@@ -27,4 +29,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.home-wrapper {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+</style>
