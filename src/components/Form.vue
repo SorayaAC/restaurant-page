@@ -31,7 +31,6 @@
               {{ index }}
             </option>
           </select>
-          <p>*Para grupos numerosos, llámanos.</p>
         </div>
 
         <div class="form-column">
@@ -42,7 +41,9 @@
           <input type="email" />
           <label for="">Teléfono</label>
           <input type="phone" />
-          <p>¿Ya tienes una cuenta? Inicia sesión <span>aquí</span></p>
+          <p class="login-text">
+            ¿Ya tienes una cuenta? Inicia sesión <span>aquí</span>
+          </p>
         </div>
       </div>
 
@@ -90,12 +91,12 @@ export default {
 .form-column {
   display: flex;
   flex-direction: column;
-  margin: 0 1rem;
+  margin: 1rem 1rem;
 }
 .form-button {
   background-color: #ae8a46;
   border: none;
-  margin: 3rem 0 3rem 0;
+  margin: 2rem 0 3rem 0;
   padding: 0.5rem;
   color: black;
   font-weight: bold;
@@ -117,7 +118,11 @@ export default {
   width: 11.5rem;
   height: 8rem;
 }
-
+label {
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #ae8a46;
+}
 input[type='date'],
 input[type='time'],
 select,
@@ -129,6 +134,16 @@ input[type='phone'] {
   margin: 0.2rem 0;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+.login-text {
+  font-size: 0.8rem;
+  color: #ae8a46;
+  margin-top: 1rem;
+}
+.login-text span {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
