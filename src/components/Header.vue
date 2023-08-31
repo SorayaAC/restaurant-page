@@ -1,12 +1,11 @@
 <template>
   <header class="header">
     <img src="../assets/images/NameLogo.png" alt="" class="header-logo" />
-    <!-- <router-link
+    <button
+      v-if="isHomePage"
       class="header-button"
-      :to="{ name: 'RestaurantList', hash: 'first-title' }"
-      >Reservar</router-link
-    > -->
-    <button v-if="isHomePage" class="header-button" @click="bookRestaurant">
+      @click="scrollToRestaurantList"
+    >
       Reservar
     </button>
     <button v-else class="header-button" @click="returnHome">Volver</button>
@@ -27,8 +26,13 @@ export default {
   },
 
   methods: {
-    bookRestaurant() {
-      this.$router.push({ name: 'RestaurantCard' });
+    scrollToRestaurantList() {
+      const restaurantListTitle = document.querySelector(
+        '#restaurantListTitle'
+      );
+      if (restaurantListTitle) {
+        restaurantListTitle.scrollIntoView({ behavior: 'smooth' });
+      }
     },
     returnHome() {
       this.$router.push({ path: '/' });
@@ -61,6 +65,7 @@ export default {
   color: black;
   font-weight: bold;
   cursor: pointer;
+  text-transform: uppercase;
 }
 @media (min-width: 768px) {
   .header-logo {

@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="restaurantListTitle">
     <div class="title">
       <div class="separator"></div>
       <div id="restaurants" class="title-text">Restaurantes</div>

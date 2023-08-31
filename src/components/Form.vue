@@ -6,7 +6,6 @@
       <div class="separator"></div>
     </div>
     <form class="form">
-      <p>La botanica Madrid</p>
       <label for="dateInput">Fecha</label>
       <input type="date" id="dateInput" :min="toDay" v-model="selectedDate" />
       <label for="timeInput">Hora</label>
@@ -18,7 +17,7 @@
           {{ index }}
         </option>
       </select>
-
+      <p>Si ya estás registrado logueate</p>
       <label for="">Nombre y apellidos</label>
       <input type="text" />
       <label for="">Correo electronico</label>

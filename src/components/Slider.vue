@@ -9,6 +9,9 @@
           <img :src="slide" class="slider-img" alt="Slide Image" />
         </div>
       </div>
+      <div v-if="isHomePage" class="slider-arrow-down">
+        <i class="fa-solid fa-arrow-down fa-bounce" style="color: #ae8a46"></i>
+      </div>
       <div class="slider-logo">
         <img src="@/assets/images/LaBotanicaLogo.png" alt="Logo" />
       </div>
@@ -39,6 +42,15 @@ export default {
       currentIndex: 0,
       slides: [slide1, slide2, slide3],
     };
+  },
+  computed: {
+    isHomePage() {
+      if (this.$route.path === '/') {
+        return true;
+      } else {
+        return false;
+      }
+    },
   },
   methods: {
     prevSlide() {
@@ -81,6 +93,14 @@ export default {
   height: 90vh;
   object-fit: cover;
 }
+.slider-arrow-down {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-size: 2rem;
+}
 .controls {
   z-index: 10;
   display: flex;
@@ -118,6 +138,9 @@ export default {
   }
   .slider-icon {
     font-size: 2rem;
+  }
+  .slider-arrow-down {
+    font-size: 3rem;
   }
 }
 @media (min-width: 1200px) {
