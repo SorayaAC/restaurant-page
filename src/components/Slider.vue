@@ -83,7 +83,6 @@ export default {
 }
 .controls {
   z-index: 10;
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -103,6 +102,11 @@ export default {
 }
 .slider-logo img {
   width: 17rem;
+}
+.slider-icon {
+  cursor: pointer;
+  font-size: 2rem;
+  outline: none;
 }
 
 @media (min-width: 768px) {
