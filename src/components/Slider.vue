@@ -9,7 +9,7 @@
           <img :src="slide" class="slider-img" alt="Slide Image" />
         </div>
       </div>
-      <div v-if="isHomePage" class="slider-arrow-down">
+      <div v-if="isHomePage" class="slider-arrow-down" @click="scrollDown">
         <i class="fa-solid fa-arrow-down fa-bounce" style="color: #ae8a46"></i>
       </div>
       <div class="slider-logo">
@@ -60,6 +60,12 @@ export default {
     nextSlide() {
       this.currentIndex = (this.currentIndex + 1) % this.slides.length;
     },
+    scrollDown() {
+      const down = document.querySelector('#down');
+      if (down) {
+        down.scrollIntoView({ behavior: 'smooth' });
+      }
+    },
   },
 };
 </script>
@@ -90,7 +96,7 @@ export default {
 
 .slider-img {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   object-fit: cover;
 }
 .slider-arrow-down {
@@ -130,9 +136,6 @@ export default {
 }
 
 @media (min-width: 768px) {
-  .slider-img {
-    height: 100vh;
-  }
   .slider-logo img {
     width: 40rem;
   }

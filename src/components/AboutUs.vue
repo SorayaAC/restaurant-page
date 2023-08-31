@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="down">
     <div class="title">
       <div class="separator"></div>
       <h3 class="title-text">Quienes Somos</h3>

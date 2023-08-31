@@ -68,6 +68,9 @@ export default {
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
+  .header {
+    padding: 1rem 2rem;
+  }
   .header-logo {
     width: 15rem;
     height: auto;
@@ -77,5 +80,8 @@ export default {
   }
 }
 @media (min-width: 1200px) {
+  .header {
+    padding: 1.5rem 3rem;
+  }
 }
 </style>
