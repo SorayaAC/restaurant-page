@@ -60,6 +60,7 @@ export default {
 }
 .header-button {
   background-color: #ae8a46;
+  width: 8rem;
   border: none;
   padding: 0.5rem;
   color: black;

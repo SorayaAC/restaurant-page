@@ -25,7 +25,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 .separator {
   width: 100%;

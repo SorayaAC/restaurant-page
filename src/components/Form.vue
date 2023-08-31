@@ -37,7 +37,7 @@
           <label for="">Nombre y apellidos</label>
 
           <input type="text" />
-          <label for="">Correo electronico</label>
+          <label for="">Correo electrónico</label>
           <input type="email" />
           <label for="">Teléfono</label>
           <input type="phone" />

@@ -8,8 +8,8 @@
       :style="{ background: `url(${restaurant.image})` }"
       :restaurants="restaurants"
     >
-      <div class="logo">
-        <img :src="restaurant.logo" alt="Logo" />
+      <div>
+        <img :src="restaurant.logo" alt="Logo" class="logo" />
       </div>
       <div class="info">
         <p>{{ restaurant.location }}</p>
@@ -55,10 +55,10 @@ export default {
   text-decoration: none;
 }
 
-.logo img {
-  border-radius: 50px;
-  max-width: 100px;
-  max-height: 100px;
+.logo {
+  border-radius: 100%;
+  height: 7rem;
+  width: 7rem;
   object-fit: contain;
 }
 .info {
@@ -83,6 +83,10 @@ export default {
     width: 19rem;
     margin: 1rem;
   }
+  .logo {
+    height: 8rem;
+    width: 8rem;
+  }
 }
 @media (min-width: 1000px) {
   .restaurant-card {
@@ -91,7 +95,11 @@ export default {
     margin: 2rem;
   }
   .restaurant-list {
-    justify-content: flex-start;
+    flex-direction: row;
+  }
+  .logo {
+    height: 12rem;
+    width: 12rem;
   }
 }
 </style>
