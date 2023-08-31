@@ -3,7 +3,6 @@
     <Header />
     <Slider />
     <div class="home-wrapper">
-      <AboutUs />
       <RestaurantList />
     </div>
     <Footer />
@@ -14,7 +13,6 @@
 import Header from '@/components/Header.vue';
 import Slider from '@/components/Slider.vue';
 import RestaurantList from '@/components/RestaurantList.vue';
-import AboutUs from '@/components/AboutUs.vue';
 import Footer from '@/components/Footer.vue';
 
 export default {
@@ -23,7 +21,6 @@ export default {
     Header,
     Slider,
     RestaurantList,
-    AboutUs,
     Footer,
   },
 };

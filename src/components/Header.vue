@@ -79,7 +79,7 @@ export default {
     padding: 1rem;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .header {
     padding: 1.5rem 3rem;
   }
