@@ -2,10 +2,8 @@
   <div>
     <Header />
     <Slider />
-    <section class="restaurant-list">
-      <h3 class="title">Restaurantes</h3>
-      <RestaurantCard />
-    </section>
+    <AboutUs />
+    <RestaurantList />
     <Footer />
   </div>
 </template>
@@ -13,7 +11,8 @@
 <script>
 import Header from '@/components/Header.vue';
 import Slider from '@/components/Slider.vue';
-import RestaurantCard from '@/components/RestaurantCard.vue';
+import RestaurantList from '@/components/RestaurantList.vue';
+import AboutUs from '@/components/AboutUs.vue';
 import Footer from '@/components/Footer.vue';
 
 export default {
@@ -21,18 +20,11 @@ export default {
   components: {
     Header,
     Slider,
-    RestaurantCard,
+    RestaurantList,
+    AboutUs,
     Footer,
   },
 };
 </script>
 
-<style scoped>
-.restaurant-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #ededed;
-}
-</style>
+<style scoped></style>

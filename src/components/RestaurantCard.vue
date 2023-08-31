@@ -1,18 +1,18 @@
 <template>
   <div class="restaurant-list">
-    <router-link to="/booking">
-      <div
-        v-for="(restaurant, index) in restaurants"
-        :key="index"
-        class="restaurant-card"
-        :style="{ background: `url(${restaurant.image})` }"
-      >
-        <div class="logo">
-          <img :src="restaurant.logo" alt="Logo" />
-        </div>
-        <div class="info">
-          <p>{{ restaurant.location }}</p>
-        </div>
+    <router-link
+      :to="`/booking/${restaurant.id}`"
+      v-for="restaurant in restaurants"
+      :key="restaurant.id"
+      class="restaurant-card"
+      :style="{ background: `url(${restaurant.image})` }"
+      state="restaurants"
+    >
+      <div class="logo">
+        <img :src="restaurant.logo" alt="Logo" />
+      </div>
+      <div class="info">
+        <p>{{ restaurant.location }}</p>
       </div>
     </router-link>
   </div>

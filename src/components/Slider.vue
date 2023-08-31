@@ -9,10 +9,21 @@
           <img :src="slide" class="slider-img" alt="Slide Image" />
         </div>
       </div>
-    </div>
-    <div class="controls">
-      <button class="prev-button" @click="prevSlide">&lt;</button>
-      <button class="next-button" @click="nextSlide">&gt;</button>
+      <div class="slider-logo">
+        <img src="@/assets/images/LaBotanicaLogo.png" alt="Logo" />
+      </div>
+      <div class="controls">
+        <i
+          class="fa-solid fa-circle-chevron-left slider-icon"
+          @click="prevSlide"
+          style="color: #d8a557"
+        ></i>
+        <i
+          class="fa-solid fa-circle-chevron-right slider-icon"
+          @click="nextSlide"
+          style="color: #d8a557"
+        ></i>
+      </div>
     </div>
   </div>
 </template>
@@ -45,8 +56,10 @@ export default {
 .slider-container {
   width: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
 .slider {
   position: relative;
   overflow: hidden;
@@ -65,7 +78,7 @@ export default {
 
 .slider-img {
   width: 100%;
-  height: 70vh;
+  height: 90vh;
   object-fit: cover;
 }
 .controls {
@@ -79,6 +92,33 @@ export default {
   bottom: 45%;
   width: auto;
   margin: 0 auto;
-  padding: 0 10%;
+  padding: 0 5%;
+}
+.slider-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.slider-logo img {
+  width: 17rem;
+}
+
+@media (min-width: 768px) {
+  .slider-img {
+    height: 100vh;
+  }
+  .slider-logo img {
+    width: 40rem;
+  }
+  .slider-icon {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .slider-logo img {
+    width: 52rem;
+  }
 }
 </style>

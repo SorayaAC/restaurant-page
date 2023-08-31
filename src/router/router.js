@@ -5,7 +5,7 @@ import BookingPage from '../views/BookingPage.vue';
 
 const routes = [
   { path: '/', component: HomePage },
-  { path: '/booking', component: BookingPage },
+  { path: '/booking/:id', component: BookingPage, props: true },
 ];
 
 const router = createRouter({
